@@ -9,9 +9,39 @@ import SwiftUI
 
 @main
 struct FloorPlannerApp: App {
+    @AppStorage("onboarding") var onboardingStatus: Bool?
+    @ObservedObject var onboarding =  Onboarding()
+    @ObservedObject var subsbscription = Subscription()
+    @ObservedObject var creditVm = CreditsViewModal()
+    @ObservedObject var editorVm = EditorViewModel()
+
+    
+    
     var body: some Scene {
+        
         WindowGroup {
-            ContentView()
+           let  checkOnboardingStatus = onboardingStatus ?? false
+            if checkOnboardingStatus || onboarding.completedOnboarding {
+                ContentView()
+                    .tint(.accentColor)
+                    .environmentObject(onboarding)
+                    .environmentObject(subsbscription)
+                    .environmentObject(editorVm)
+                    .environmentObject(LayoutManager())
+                    .environmentObject(creditVm)
+                    .preferredColorScheme(.dark)
+                    .onAppear { UIView.appearance().tintColor = UIColor(named: "AccentColor") }
+                
+                
+            } else {
+                OnboardingView()
+                    .tint(.accentColor)
+                    .environmentObject(onboarding)
+                    .environmentObject(subsbscription)
+                    .preferredColorScheme(.dark)
+                
+            }
+          
         }
     }
 }

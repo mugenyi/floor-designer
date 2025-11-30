@@ -6,8 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BA489DB82EDAD3D2004C6ED9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA489DB72EDAD3D2004C6ED9 /* StoreKit.framework */; };
+		BA489DBB2EDAD419004C6ED9 /* SimpleKeychain in Frameworks */ = {isa = PBXBuildFile; productRef = BA489DBA2EDAD419004C6ED9 /* SimpleKeychain */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		BA41EC3D2E1F8CF300C2E556 /* FloorPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloorPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA489DB72EDAD3D2004C6ED9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +29,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA489DBB2EDAD419004C6ED9 /* SimpleKeychain in Frameworks */,
+				BA489DB82EDAD3D2004C6ED9 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +41,7 @@
 			isa = PBXGroup;
 			children = (
 				BA41EC3F2E1F8CF300C2E556 /* FloorPlanner */,
+				BA489DB62EDAD3D2004C6ED9 /* Frameworks */,
 				BA41EC3E2E1F8CF300C2E556 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +52,14 @@
 				BA41EC3D2E1F8CF300C2E556 /* FloorPlanner.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BA489DB62EDAD3D2004C6ED9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA489DB72EDAD3D2004C6ED9 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +82,7 @@
 			);
 			name = FloorPlanner;
 			packageProductDependencies = (
+				BA489DBA2EDAD419004C6ED9 /* SimpleKeychain */,
 			);
 			productName = FloorPlanner;
 			productReference = BA41EC3D2E1F8CF300C2E556 /* FloorPlanner.app */;
@@ -94,6 +112,9 @@
 			);
 			mainGroup = BA41EC342E1F8CF300C2E556;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BA489DB92EDAD419004C6ED9 /* XCRemoteSwiftPackageReference "SimpleKeychain" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BA41EC3E2E1F8CF300C2E556 /* Products */;
 			projectDirPath = "";
@@ -259,8 +280,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,8 +308,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,6 +345,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA489DB92EDAD419004C6ED9 /* XCRemoteSwiftPackageReference "SimpleKeychain" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/SimpleKeychain";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA489DBA2EDAD419004C6ED9 /* SimpleKeychain */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA489DB92EDAD419004C6ED9 /* XCRemoteSwiftPackageReference "SimpleKeychain" */;
+			productName = SimpleKeychain;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BA41EC352E1F8CF300C2E556 /* Project object */;
 }
