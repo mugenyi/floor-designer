@@ -410,7 +410,10 @@ struct ContentView: View {
                                             
                                         }.padding(.horizontal)
                                         
-                                    } else {
+                                    }
+                                    
+                                    
+                                    if selection == .customSyles {
                                         
                                         
                                         
@@ -485,6 +488,16 @@ struct ContentView: View {
                                             
                                             
                                         }
+                                        
+                                    }
+                                    
+                                    if selection == .image {
+                                        
+                                    
+                                        
+                                        UploadUI(isShowing: $showStyleSelector)
+                                        
+                                        
                                     }
                                     
                                     
@@ -740,16 +753,7 @@ struct ContentView: View {
                                 }
                                 
                             }
-                            
-                            ToolbarItem(placement: .principal){
-                                
-                               Text("Landscape Design")
-                                    .fontWeight(.bold)
-                                
-                                
-                            }
-                            
-                            
+                
                             
                             
                         }.preferredColorScheme(.dark)
@@ -811,7 +815,7 @@ struct ContentView: View {
                         
                         
                         
-                    }
+                    }.navigationTitle("Floor Tile Design")
                     
                     
                 }

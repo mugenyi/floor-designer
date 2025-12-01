@@ -134,14 +134,17 @@ struct SelectImageIconView: View {
                 }
             }
             
-            
-            if let roomStyle =  editorVM.selectedRoomStyle  {
+             
+            if let roomStyle =  editorVM.selectedRoomStyle {
                 
                 if icon == "paintbrush" {
                     
                     VStack{
                         
                      
+                        if editorVM.selectedRoomStyle != .image {
+                            
+                            
                             
                             Image(roomStyle.rawValue)
                                 .resizable()
@@ -161,6 +164,33 @@ struct SelectImageIconView: View {
                                         
                                     }
                                 }
+                            
+                        } else {
+                            
+                            if let image =  editorVM.selectedStyleImage  {
+                                
+                                Image(uiImage: image )
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 150,height: 150)
+                                
+                                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                                    .padding(.bottom)
+                                    .overlay {
+                                        VStack{
+                                            
+                                            Image(systemName: "trash")
+                                                .font(.system(size: 18, weight: .medium))
+                                            
+                                                .frame(width: 32, height: 32)
+                                                .background(.ultraThinMaterial)
+                                                .clipShape(Circle())
+                                            
+                                            
+                                        }
+                                    }
+                            }
+                        }
                             
                             Text(roomStyle.localizedName)
                                 .font(.footnote)

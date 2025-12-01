@@ -1812,6 +1812,9 @@
     "Add  Image" : {
 
     },
+    "Add a photo of the floor design" : {
+
+    },
     "African Tribal" : {
       "localizations" : {
         "ar" : {
@@ -11780,6 +11783,9 @@
     "Floor Design Selector" : {
 
     },
+    "Floor Tile Design" : {
+
+    },
     "Formal Garden" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -17899,6 +17905,7 @@
       }
     },
     "Landscape Design" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -23113,6 +23120,9 @@
           }
         }
       }
+    },
+    "Other Options" : {
+
     },
     "Outdoor Living" : {
       "extractionState" : "stale",

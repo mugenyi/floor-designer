@@ -35,7 +35,7 @@ class EditorViewModel: ObservableObject {
     @Published var selectedImage:UIImage? = nil
     @Published var selectedRoomType:RoomType? = nil
     @Published var selectedRoomStyle:FloorTileDesigns? = nil
-    @Published var selectedFaceImage:UIImage? = nil
+    @Published var selectedStyleImage:UIImage? = nil
     @Published var customStylePrompt:String?
     
     
@@ -344,6 +344,25 @@ class EditorViewModel: ObservableObject {
         
         }
         
+        
+        // Add the image to the body
+    
+    if let image = selectedStyleImage {
+        
+        if let imageData = image.jpegData(compressionQuality:0.7) {
+            
+            body.append("--\(boundary)\r\n".data(using: .utf8)!)
+            body.append("Content-Disposition: form-data; name=\"image\"; filename=\"image.jpg\"\r\n".data(using: .utf8)!)
+            body.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
+            body.append(imageData)
+            body.append("\r\n".data(using: .utf8)!)
+          
+              body.append("--\(boundary)--\r\n".data(using: .utf8)!)
+        }
+        
+        
+    
+    }
   
         
         
@@ -359,10 +378,10 @@ class EditorViewModel: ObservableObject {
     
             
      
-//                 let jsonString = String(data: data, encoding: .utf8)
-//     
-//                 print(jsonString)
-//                 
+                 let jsonString = String(data: data, encoding: .utf8)
+     
+                 print(jsonString)
+                 
             
             guard let response =  response as? HTTPURLResponse, response.statusCode == 200 else {
                 

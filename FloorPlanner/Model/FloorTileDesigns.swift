@@ -24,8 +24,8 @@ enum FloorTileDesigns: String, CaseIterable {
     
     var prompt: String {
         switch self {
-        case .custom: return ""
-        case .image: return ""
+        case .custom: return "custom"
+        case .image: return "image"
 
         case .marbleTile:
             return "A luxurious marble tile floor with natural veining, glossy finish, soft white and grey patterns, and elegant stone texture."
