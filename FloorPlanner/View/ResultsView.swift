@@ -294,7 +294,7 @@ struct ResultsView:View {
                         
                         Text("Share")
                         
-                    }  
+                    }
                         .padding(.horizontal)
                     
                     
@@ -485,7 +485,7 @@ struct ResultsView:View {
                                         } label: {
                                             
                                             
-                                            Text("whitebg.net")
+                                            Text("dpsmiles.net")
                                                 .font(.footnote)
                                                 .foregroundStyle(.white)
                                                 .shadow(color: .black, radius: 4, x: 0, y: 0)

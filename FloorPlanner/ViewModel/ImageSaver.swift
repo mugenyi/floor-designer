@@ -28,7 +28,7 @@ class ImageSaver: NSObject {
         return renderer.image { context in
             image.draw(at: .zero)
 
-            let watermarkText = "whitebg.net"
+            let watermarkText = "dpsmiles.net"
             let watermarkText2 = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ?? ""
 
             let fontSize = image.size.width * 0.04
