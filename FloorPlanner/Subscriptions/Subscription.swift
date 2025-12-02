@@ -10,7 +10,7 @@ class Subscription : ObservableObject {
     @Published var showPaymentSheet = false
     @Published var productIds:[String] = [ "B100","B102"]
     @Published var selectedProductId = "A900"
-    @Published var inputImages = ["kitchen", "bedroom", "livingRoom","diningRoom"]
+    @Published var inputImages = ["kitchen", "kitchen", "kitchen","kitchen"]
     @Published var  outputImages = ["out1", "out2", "out3","out4"]
     @Published var originalImage:UIImage?
     @Published var outputImage:URL?
