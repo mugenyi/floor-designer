@@ -16,7 +16,7 @@ struct SettingsView: View {
     @State var feedbackText = ""
     @State var showAlert:Bool =  false
     @FocusState var isTextFieldFocused:Bool
-    let appID =  "id6744259092"
+    let appID =  "id6748433357"
     
     var settingsList:[Settings] = [
         Settings(name: String(localized: "Terms of Service"), icon: "text.justify.right", url: "https://whitebg.net/terms-of-service"),

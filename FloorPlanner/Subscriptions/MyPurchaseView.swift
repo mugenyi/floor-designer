@@ -145,7 +145,7 @@ struct MyPurchaseView: View {
     }
     
     var callToActionText: String {
-        if isFreeTrial {
+        if subscription.selectedProductId == subscription.prodFreeTrial {
             return String(localized: "Try For Free")
         }else {
             

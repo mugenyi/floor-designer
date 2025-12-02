@@ -8,14 +8,14 @@ class Subscription : ObservableObject {
     
     @Published var isSubscribed = false
     @Published var showPaymentSheet = false
-    @Published var productIds:[String] = [ "B100","B102"]
-    @Published var selectedProductId = "A900"
+    @Published var productIds:[String] = [ "FTD1000","FTD1002"]
+    @Published var selectedProductId = "FTD1000"
     @Published var inputImages = ["kitchen", "kitchen", "kitchen","kitchen"]
     @Published var  outputImages = ["out1", "out2", "out3","out4"]
     @Published var originalImage:UIImage?
     @Published var outputImage:URL?
-    @Published var prodFreeTrial = "B100"
-    @Published var prodNoTrial = "B102"
+    @Published var prodFreeTrial = "FTD1000"
+    @Published var prodNoTrial = "FTD1002"
     
     public enum StoreError: Error {
         case failedVerification

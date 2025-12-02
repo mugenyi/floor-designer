@@ -14,6 +14,7 @@ class LayoutManager:ObservableObject {
     @Published var errorMessage = ""
     @Published var isIpad:Bool = false
     @Published var deviceLang = ""
+    @Published var appId = "6748433357"
     
     init(showToast: Bool = false, toastMessage: String = "", showErrorAlert: Bool = false, errorMessage: String = "", isIpad: Bool =  false) {
         self.showToast = showToast

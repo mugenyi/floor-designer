@@ -16,9 +16,22 @@
 		BA489DB72EDAD3D2004C6ED9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BA3C9C3A2EDE92E200521DE4 /* Exceptions for "FloorPlanner" folder in "FloorPlanner" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BA41EC3C2E1F8CF300C2E556 /* FloorPlanner */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BA41EC3F2E1F8CF300C2E556 /* FloorPlanner */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BA3C9C3A2EDE92E200521DE4 /* Exceptions for "FloorPlanner" folder in "FloorPlanner" target */,
+			);
 			path = FloorPlanner;
 			sourceTree = "<group>";
 		};
@@ -109,6 +122,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
+				ca,
 			);
 			mainGroup = BA41EC342E1F8CF300C2E556;
 			minimizedProjectReferenceProxies = 1;
@@ -207,6 +222,7 @@
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -265,6 +281,7 @@
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -279,6 +296,8 @@
 				DEVELOPMENT_TEAM = 8Y3WS9DLAD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FloorPlanner/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Floor Designer";
 				INFOPLIST_KEY_NSCameraUsageDescription = "To to use photos from your camera, please allow access to your camera.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need access to save image to your library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -286,6 +305,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +329,8 @@
 				DEVELOPMENT_TEAM = 8Y3WS9DLAD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FloorPlanner/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Floor Designer";
 				INFOPLIST_KEY_NSCameraUsageDescription = "To to use photos from your camera, please allow access to your camera.";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need access to save image to your library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -316,6 +338,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

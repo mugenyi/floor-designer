@@ -10,8 +10,9 @@ import SwiftUI
 struct AnimatedListView: View {
     // Sample data for the list
     let items = [
-                String(localized:"Instant Landscape Transformation"),
+                String(localized:"Instant floor Transformation"),
                  String(localized:"Multiple Design Styles to Explore"),
+                 String(localized:"Upload custom floor designs "),
                  String(localized:"Easily Tweak Results"),
                  String(localized:"High-Quality & Shareable Renders"),
     ]

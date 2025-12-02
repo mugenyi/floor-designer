@@ -96,7 +96,7 @@ struct AlertModal: View {
     
     
     func openAppStoreReviewPage() {
-        let appStoreID = "6744259092"
+        let appStoreID = "6748433357"
         if let url = URL(string: "https://apps.apple.com/app/id\(appStoreID)?action=write-review"),
            UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)

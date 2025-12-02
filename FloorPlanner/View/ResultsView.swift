@@ -294,13 +294,14 @@ struct ResultsView:View {
                         
                         Text("Share")
                         
-                    }  .foregroundStyle(.black)
+                    }  
                         .padding(.horizontal)
                     
                     
                 }.buttonStyle(.bordered)
-                    .background(Color.white)
-                    .cornerRadius(10)
+                    .buttonBorderShape(.capsule)
+            
+                  
                 
                 
                 Spacer()

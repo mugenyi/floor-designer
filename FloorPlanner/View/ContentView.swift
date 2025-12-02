@@ -44,9 +44,9 @@ struct ContentView: View {
     
     
     var samplePrompts = [
-        String(localized: "A modern home landscape design with clean geometric lines, a stone pathway leading to the entrance, symmetrical garden beds filled with ornamental grasses and low shrubs, a minimalist water feature in the front yard, soft LED ground lights, and a perfectly trimmed green lawn, all arranged in a sleek, contemporary style."),
-        String(localized: "A tropical home garden with tall palm trees, vibrant flowering plants like hibiscus and bougainvillea, a winding stone pathway surrounded by lush greenery, a small koi pond with floating lilies, bamboo fencing, and cozy wooden outdoor seating, creating a resort-like paradise atmosphere."),
-        String(localized: "A charming cottage-style home landscape with colorful flower beds filled with roses, lavender, and daisies, a rustic cobblestone pathway leading to a wooden gate, climbing vines on trellises, a white picket fence, and a cozy garden bench shaded by a large oak tree, radiating warmth and homeliness.")
+        String(localized: "Cozy Mediterranean-style kitchen floor featuring hand-painted terracotta Encaustic tiles in faded azure blue and burnt orange geometric patterns. Rustic aesthetic, surrounded by reclaimed wood cabinetry and potted plants. Soft natural afternoon light, textured and earthy atmosphere, macro detail of the tile texture, high definition, bohemian chic style"),
+        String(localized: "Serene Japandi bedroom design, light white-oak flooring laid in a precise herringbone pattern. Soft diffused morning light, low-profile furniture, organic textures, harmony of nature. Close up on the wood grain details and joinery. Calming beige and cream tones, architectural visualization, photorealistic render, clean and airy"),
+        String(localized: " A high-gloss Calacatta marble flooring with intricate black marble geometric borders and Art Deco inlays. A crystal chandelier reflects on the polished floor surface. Creamy white walls with wainscoting, opulent atmosphere, wide-angle architectural shot, cinematic lighting, hyper-realistic, interior design magazine photography")
     ]
     
     
@@ -195,8 +195,9 @@ struct ContentView: View {
                                 
                                 
                             }.onDisappear{
+                            
                                 selection = .defaultSyles
-                                
+
                                 
                             }
                             .alert("Grant Camera permission", isPresented: $showCameraPermissionAlert, actions: {
@@ -216,7 +217,7 @@ struct ContentView: View {
                             
                             .onAppear{
                                 
-                                subscription.productIds = [ "B101","B102"]
+                               
                                 
                                 cameraStatus = checkCameraPermission()
                                 permissionGranted = (cameraStatus == .authorized)
@@ -377,7 +378,7 @@ struct ContentView: View {
                                                             }
                                                             .padding(.bottom)
                                                             .overlay {
-                                                                if !["formalGarden","cottageGarden", "woodlandGarden"].contains(roomStyle.rawValue) && !subscription.isSubscribed {
+                                                                if !["porcelainMatte","marbleTile", "ceramicGlossy"].contains(roomStyle.rawValue) && !subscription.isSubscribed {
                                                                     
                                                                     VStack {
                                                                         HStack{
@@ -418,7 +419,7 @@ struct ContentView: View {
                                         
                                         
                                         VStack {
-                                            MyTextEditor(editor: editor, isTextFieldFocused: $isTextFieldFocused, canSubmit: $canSubmit,title: String(localized: "Describe your floor design"), description:String(localized: "Tell us in detail how you want your landscape to look"))
+                                            MyTextEditor(editor: editor, isTextFieldFocused: $isTextFieldFocused, canSubmit: $canSubmit,title: String(localized: "Describe your floor design"), description:String(localized: "Tell us in detail how you want your floor to look"))
                                             
                                             Button {
                                                 
@@ -702,6 +703,7 @@ struct ContentView: View {
                             
                             
                         }.frame(maxWidth:720)
+                            .padding(.top)
                         
                         .preferredColorScheme(.dark)
                         .onChange(of: editor.result, { oldValue, newValue in
@@ -781,6 +783,8 @@ struct ContentView: View {
                                 
                                 
                                 editor.isSubscribed = subscription.isSubscribed ? "1" : "0"
+                                subscription.productIds = ["FTD1001","FTD1002"]
+                                subscription.selectedProductId = "FTD1001"
                                 
                             }
                         
@@ -815,7 +819,7 @@ struct ContentView: View {
                         
                         
                         
-                    }.navigationTitle("Floor Tile Design")
+                    }.navigationTitle("Floor  Designer")
                     
                     
                 }
