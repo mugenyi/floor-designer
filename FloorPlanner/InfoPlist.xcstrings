@@ -475,229 +475,229 @@
       "localizations" : {
         "ar" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "لاستخدام الصور من كاميرتك، يرجى السماح بالوصول إلى الكاميرا."
           }
         },
         "ca" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Per utilitzar les fotos de la teva càmera, si us plau, permet l'accés a la teva càmera."
           }
         },
         "cs" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Chcete-li používat fotky z fotoaparátu, povolte prosím přístup k fotoaparátu."
           }
         },
         "da" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "For at bruge billeder fra dit kamera, bedes du give adgang til dit kamera."
           }
         },
         "de" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Um Fotos von Ihrer Kamera zu verwenden, erlauben Sie bitte den Zugriff auf Ihre Kamera."
           }
         },
         "el" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Για να χρησιμοποιήσετε φωτογραφίες από την κάμερά σας, παρακαλούμε επιτρέψτε την πρόσβαση στην κάμερά σας."
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "To to use photos from your camera, please allow access to your camera."
+            "value" : "Allow camera access to take photos of your floors and tiles so the app can generate accurate floor designs."
           }
         },
         "es" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Para usar fotos de tu cámara, por favor, permite el acceso a tu cámara."
           }
         },
         "es-419" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Para usar las fotos de tu cámara, permite el acceso a la cámara."
           }
         },
         "es-US" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Para usar las fotos de tu cámara, permite el acceso a la cámara."
           }
         },
         "fi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Jotta voit käyttää kuvia kamerastasi, salli pääsy kameraan."
           }
         },
         "fr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Pour utiliser les photos de votre appareil photo, veuillez autoriser l'accès à votre appareil photo."
           }
         },
         "fr-CA" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Pour utiliser les photos de votre appareil photo, veuillez autoriser l'accès à votre appareil photo."
           }
         },
         "he" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "כדי להשתמש בתמונות מהמצלמה, נא לאפשר גישה למצלמה."
           }
         },
         "hi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "अपने कैमरे से फ़ोटो का उपयोग करने के लिए, कृपया अपने कैमरे तक पहुँच की अनुमति दें।"
           }
         },
         "hr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Da biste koristili fotografije s kamere, molimo dopustite pristup kameri."
           }
         },
         "hu" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "A kamerájából származó fotók használatához kérjük, engedélyezze a hozzáférést a kamerához."
           }
         },
         "id" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Untuk menggunakan foto dari kamera Anda, mohon izinkan akses ke kamera Anda."
           }
         },
         "it" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Per usare le foto dalla tua fotocamera, consenti l'accesso alla fotocamera."
           }
         },
         "ja" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "カメラの写真を使用するには、カメラへのアクセスを許可してください。"
           }
         },
         "ko" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "카메라의 사진을 사용하려면 카메라 접근을 허용해 주세요."
           }
         },
         "ms" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Untuk menggunakan foto daripada kamera anda, sila benarkan akses kepada kamera anda."
           }
         },
         "nb" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "For å bruke bilder fra kameraet ditt, vennligst gi tilgang til det."
           }
         },
         "nl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Om foto's van je camera te gebruiken, geef dan toegang tot je camera."
           }
         },
         "pl" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Aby używać zdjęć z aparatu, proszę zezwolić na dostęp do aparatu."
           }
         },
         "pt-BR" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Para usar fotos da sua câmera, permita o acesso à sua câmera."
           }
         },
         "pt-PT" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Para utilizar as fotografias da sua câmara, por favor, permita o acesso à sua câmara."
           }
         },
         "ro" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Pentru a utiliza fotografiile de pe camera dvs., vă rugăm să permiteți accesul la cameră."
           }
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Чтобы использовать фотографии с вашей камеры, пожалуйста, разрешите доступ к ней."
           }
         },
         "sk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Ak chcete použiť fotografie z fotoaparátu, povoľte, prosím, prístup k fotoaparátu."
           }
         },
         "sv" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "För att använda foton från din kamera måste du ge åtkomst till den."
           }
         },
         "th" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "โปรดอนุญาตให้เข้าถึงกล้องเพื่อใช้รูปภาพ"
           }
         },
         "tr" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Kameranızdaki fotoğrafları kullanmak için lütfen kameranıza erişim izni verin."
           }
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Щоб використовувати фотографії з вашої камери, будь ласка, дозвольте доступ до неї."
           }
         },
         "vi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Để sử dụng ảnh từ máy ảnh của bạn, vui lòng cho phép truy cập vào máy ảnh."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "若要使用相机拍照，请允许访问您的相机。"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "若要使用相機中的相片，請允許存取您的相機。"
           }
         },
         "zh-HK" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "如要使用相機中的相片，請允許取用你的相機。"
           }
         }
