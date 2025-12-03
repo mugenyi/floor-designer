@@ -20,7 +20,10 @@ struct OnboardingView: View {
                 PaymentView(selection: $selection)
             }
       
-        }.preferredColorScheme(.dark)
+        }
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+    
+            
     }
     
 

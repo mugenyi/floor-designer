@@ -17,12 +17,12 @@ struct LandingView: View {
             
         VStack{
             
-            TabView(selection: $tabCount) {
+         
                 
                 Page1(tabCount: $tabCount,selection: $selection)
                     .tag(1)
                 
-            }
+            
            
             
         }.ignoresSafeArea()

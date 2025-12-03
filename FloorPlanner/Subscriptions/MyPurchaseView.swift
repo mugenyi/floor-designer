@@ -27,7 +27,6 @@ struct MyPurchaseView: View {
     @State var showNoneRestoredAlert: Bool = false
     @State private var showTermsActionSheet: Bool = false
 
-    @State private var selectedProductId: String = ""
     
     @State private var isFreeTrial =  true
     
@@ -125,7 +124,8 @@ struct MyPurchaseView: View {
                 await MainActor.run {
                     productDetails = sortedDetails
                     isFetchingProducts = false
-                    selectedProductId = subscription.productIds[0]
+                    generateSubtext()
+//                    subscription.selectedProductId = subscription.productIds[0]
 //                    // Default to selecting the yearly product
 //                    if let yearlyProduct = sortedDetails.first(where: { $0.duration == "year" }) {
 //                        selectedProductId = yearlyProduct.productId
@@ -200,6 +200,33 @@ struct MyPurchaseView: View {
         return 70 // Fallback value for yearly discount
     }
     
+    fileprivate func generateSubtext() {
+        
+     
+        for productDetail in productDetails {
+        
+            if productDetail.duration == "week" && subscription.selectedProductId == productDetail.id {
+                
+                if productDetail.id == subscription.prodFreeTrial {
+                    
+                    subscriptionSubText = String(localized:  "3 Days Free, then") + " \(productDetail.price) / \(productDetail.duration)"
+                }else {
+                    
+                    subscriptionSubText = " \(productDetail.price) / \(productDetail.duration) "
+                }
+                
+                
+            }
+            
+            if  productDetail.duration == "year" && subscription.selectedProductId == productDetail.id {
+                
+                subscriptionSubText = "\(productDetail.price) / \(productDetail.duration)"
+            }
+            
+          
+        }
+    }
+    
     var body: some View {
         
         ZStack {
@@ -270,29 +297,11 @@ struct MyPurchaseView: View {
                     .padding(.top)
                 } .fontWeight(.semibold)
                 
-                .onChange(of: selectedProductId) { oldValue, newValue in
+                .onChange(of: subscription.selectedProductId) { oldValue, newValue in
                     
 
                     
-                    for productDetail in productDetails {
-                        if productDetail.duration == "week" && selectedProductId == productDetail.id {
-                            
-                            if productDetail.id == subscription.prodFreeTrial {
-                                
-                                subscriptionSubText = String(localized:  "3 Days Free, then") + " \(productDetail.price) / \(productDetail.duration)"
-                            }else {
-                                
-                                subscriptionSubText = " \(productDetail.price) / \(productDetail.duration) "
-                            }
-                            
-                            
-                        }
-                        
-                       if  productDetail.duration == "year" && selectedProductId == productDetail.id {
-                           
-                            subscriptionSubText = "\(productDetail.price) / \(productDetail.duration)"
-                        }
-                    }
+                    generateSubtext()
                     
                     
                 }
@@ -314,9 +323,9 @@ struct MyPurchaseView: View {
                                 
                                 Button {
                                     withAnimation {
-                                        selectedProductId = productDetails.productId
+                                        subscription.selectedProductId = productDetails.productId
                                     }
-                                    if selectedProductId != subscription.prodFreeTrial {
+                                    if subscription.selectedProductId != subscription.prodFreeTrial {
                                         isFreeTrial =  false
                                     }else{
                                         isFreeTrial =  true
@@ -371,10 +380,10 @@ struct MyPurchaseView: View {
                                             }
                                             
                                             ZStack {
-                                                Image(systemName: (selectedProductId == productDetails.productId) ? "circle.fill" : "circle")
-                                                    .foregroundStyle((selectedProductId == productDetails.productId) ? color : Color.primary.opacity(0.15))
+                                                Image(systemName: (subscription.selectedProductId == productDetails.productId) ? "circle.fill" : "circle")
+                                                    .foregroundStyle((subscription.selectedProductId == productDetails.productId) ? color : Color.primary.opacity(0.15))
                                                 
-                                                if selectedProductId == productDetails.productId {
+                                                if subscription.selectedProductId == productDetails.productId {
                                                     Image(systemName: "checkmark")
                                                         .foregroundStyle(Color.white)
                                                         .scaleEffect(0.7)
@@ -393,9 +402,9 @@ struct MyPurchaseView: View {
                                     .overlay(
                                         ZStack {
                                             RoundedRectangle(cornerRadius: 12)
-                                                .stroke((selectedProductId == productDetails.productId) ? color : Color.primary.opacity(0.15), lineWidth: 1)
+                                                .stroke((subscription.selectedProductId == productDetails.productId) ? color : Color.primary.opacity(0.15), lineWidth: 1)
                                             RoundedRectangle(cornerRadius: 12)
-                                                .foregroundStyle((selectedProductId == productDetails.productId) ? color.opacity(0.05) : Color.clear)
+                                                .foregroundStyle((subscription.selectedProductId == productDetails.productId) ? color.opacity(0.05) : Color.clear)
                                         }
                                     )
                                 }
@@ -424,7 +433,7 @@ struct MyPurchaseView: View {
                             // Purchase button
                             Button {
                                 if !isPurchasing {
-                                    purchaseSubscription(productId: self.selectedProductId)
+                                    purchaseSubscription(productId: subscription.selectedProductId)
                                 }
                             } label: {
                                 HStack {
@@ -526,9 +535,9 @@ struct MyPurchaseView: View {
         .onChange(of: isFreeTrial, { oldValue, newValue in
             
             if(newValue){
-                selectedProductId =  subscription.prodFreeTrial
+                subscription.selectedProductId =  subscription.prodFreeTrial
             }else{
-                selectedProductId = subscription.prodNoTrial
+                subscription.selectedProductId = subscription.prodNoTrial
             }
         })
           
