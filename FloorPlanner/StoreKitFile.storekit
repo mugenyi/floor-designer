@@ -116,7 +116,11 @@
           "familyShareable" : false,
           "groupNumber" : 1,
           "internalID" : "E202FC30",
-          "introductoryOffer" : null,
+          "introductoryOffer" : {
+            "internalID" : "297F23E9",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P3D"
+          },
           "localizations" : [
             {
               "description" : "",

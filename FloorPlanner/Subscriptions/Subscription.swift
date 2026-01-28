@@ -25,6 +25,7 @@ class Subscription : ObservableObject {
         self.isSubscribed = isSubscribed
         Task{
             await updateCustomerProductStatus()
+            await listenForTransactionUpdates()
         }
   
     }
@@ -50,7 +51,7 @@ class Subscription : ObservableObject {
                  
                  switch transaction.productType {
                      
-                     case .autoRenewable:
+                 case .autoRenewable,.nonConsumable:
                      
                      self.isSubscribed = true
                      
@@ -70,6 +71,18 @@ class Subscription : ObservableObject {
     func resetImages() {
        inputImages = ["image1", "heaven1","nik","zvolskiy","maage","food"]
        outputImages = ["image2", "heaven2","nik2","zvolskiy2","maage2","food2"]
+    }
+    
+    func listenForTransactionUpdates() async {
+        for await result in Transaction.updates {
+            switch result {
+            case .verified(let transaction):
+                await transaction.finish()
+                await updateCustomerProductStatus()
+            case .unverified(_, let error):
+                print("Unverified transaction: \(error)")
+            }
+        }
     }
     
     

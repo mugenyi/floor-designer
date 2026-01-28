@@ -19,4 +19,7 @@ struct PurchaseProductDetails: Identifiable {
     // Optional properties for additional subscription details
     var subscriptionGroupID: String?
     var localizedDescription: String?
+    
+    var hasFreeTrial: Bool = false
+    var trialPeriod: String? = nil
 }
